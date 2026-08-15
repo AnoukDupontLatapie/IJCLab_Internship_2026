@@ -13,4 +13,4 @@ if not mask_file.exists():
     print("Downloading mask...")
     urlretrieve(url, mask_file)
 
-print(mask_file)
+#print(mask_file)

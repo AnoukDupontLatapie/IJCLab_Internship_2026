@@ -2,6 +2,7 @@
 from bruit_fossil import freq_fossil
 from conversion import conv
 from func_theo import MBBpysm
+from mask_file_download import mask_file
 import numpy as np
 import healpy as hp
 import pysm3.units as u
@@ -61,7 +62,7 @@ Pathload = './maps/'
 
 nu0_dust = 353.0  # GHz
 
-mask_file = "HFI_Mask_GalPlane-apo0_2048_R2.00.fits"
+#mask_file = "HFI_Mask_GalPlane-apo0_2048_R2.00.fits"
 fskylist = np.array([0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 0.97, 0.99])
 
 m20 = hp.read_map(mask_file, field=list(np.where(fskylist == 0.2)[0]))

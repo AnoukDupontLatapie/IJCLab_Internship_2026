@@ -1,6 +1,7 @@
 from bruit_fossil import freq_fossil
 from conversion import conv
 from func_theo import PowerLawpysm
+from mask_file_download import mask_file
 import numpy as np
 import healpy as hp
 import pysm3.units as u
