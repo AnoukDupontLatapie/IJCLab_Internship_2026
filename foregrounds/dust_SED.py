@@ -86,7 +86,6 @@ I_nu_dust_d12 = 0
 for i in range(6):
     I_nu_dust_d12 += MBBpysm(freq_fossil, AI_dust_d12[i, 0, :],
                              betamap_dust_d12[i, :], tempmap_dust_d12[i, :], nu0_dust)
-I_nu_dust_d12 = I_nu_dust_d12/6
 
 
 # Mask

@@ -32,6 +32,24 @@ def MBBpysm(freq, A, beta, T, nu0):
                     * factor[f] for f in range(len(freq))])
     return mapd
 
+def powerlaw(nu, beta, nu_0):
+    return (nu/nu_0)**beta
+
+def powerlaws7(nu, beta, gamma, nu_0):
+    return (nu/nu_0)**(beta - gamma*np.log(nu/nu_0))
+
+def PowerLawpysm(freq, A, beta, gamma, nu0):
+    """
+    Generate power law to reproduce pysm maps
+    A in muKCMB
+    """
+    factor= u.K_RJ.to(u.uK_CMB, equivalencies=u.cmb_equivalencies(freq*u.GHz))/u.K_RJ.to(u.uK_CMB, equivalencies=u.cmb_equivalencies(nu0*u.GHz))
+    if gamma is None:
+        mapd=np.array([A*powerlaw(freq[f], beta, nu0)*factor[f] for f in range(len(freq))])
+    else:
+        mapd=np.array([A*powerlaws7(freq[f], beta, gamma, nu0)*factor[f] for f in range(len(freq))])
+
+    return mapd
 
 def temp_shift(x):
     return x*np.exp(x)/(np.exp(x)-1)**2
