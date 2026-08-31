@@ -1,7 +1,7 @@
 from bruit_fossil import freq_fossil, sigma_bin, sigma_bin_conv
 from conversion import conv
 from func_theo import MBBpysm, mu_dist, y_dist
-from foregrounds.dust_SED import nu0_dust, data_d1_20, data_d1_80, data_d10_20, data_d10_80, data_d12_20, data_d12_80
+from dust_SED import nu0_dust, data_d1_20, data_d1_80, data_d10_20, data_d10_80, data_d12_20, data_d12_80
 import numpy as np
 import pysm3.units as u
 import matplotlib.pyplot as plt
@@ -79,3 +79,4 @@ plt.ylabel(r'$data-model$ [Jy/sr]')
 
 plt.legend(fontsize=7)
 plt.loglog()
+plt.show()

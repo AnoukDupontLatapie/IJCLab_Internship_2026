@@ -62,7 +62,7 @@ Pathload = './maps/'
 
 nu0_dust = 353.0  # GHz
 
-#mask_file = "HFI_Mask_GalPlane-apo0_2048_R2.00.fits"
+# mask_file = "HFI_Mask_GalPlane-apo0_2048_R2.00.fits"
 fskylist = np.array([0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 0.97, 0.99])
 
 m20 = hp.read_map(mask_file, field=list(np.where(fskylist == 0.2)[0]))
@@ -106,23 +106,24 @@ data_d10_80 = np.mean(I_nu_d10_80[:, mask80 != 0], axis=1)
 data_d12_20 = np.mean(I_nu_d12_20[:, mask20 != 0], axis=1)
 data_d12_80 = np.mean(I_nu_d12_80[:, mask80 != 0], axis=1)
 
+## PLOTS for detailed comparison ##
 
-plt.plot(freq_fossil, np.mean(I_nu_dust_d1, axis=1)*conv, label='d1')
-plt.plot(freq_fossil, np.mean(I_nu_dust_d10, axis=1)*conv, label='d10')
-plt.plot(freq_fossil, np.mean(I_nu_dust_d12, axis=1)*conv, label='d12')
+# plt.plot(freq_fossil, np.mean(I_nu_dust_d1, axis=1)*conv, label='d1')
+# plt.plot(freq_fossil, np.mean(I_nu_dust_d10, axis=1)*conv, label='d10')
+# plt.plot(freq_fossil, np.mean(I_nu_dust_d12, axis=1)*conv, label='d12')
 
-plt.plot(freq_fossil, data_d1_20*conv, label='d1, 20%', c='blue')
-plt.plot(freq_fossil, data_d10_20*conv, label='d10,20%', c='orange')
-plt.plot(freq_fossil, data_d12_20*conv, label='d12,20%', c='green')
-plt.plot(freq_fossil, data_d1_80*conv,
-         label='d1,80%', linestyle='--', c='blue')
-plt.plot(freq_fossil, data_d10_80*conv,
-         label='d10,80%', linestyle='--', c='orange')
-plt.plot(freq_fossil, data_d12_80*conv,
-         label='d12,80%', linestyle='--', c='green')
+# plt.plot(freq_fossil, data_d1_20*conv, label='d1, 20%', c='blue')
+# plt.plot(freq_fossil, data_d10_20*conv, label='d10,20%', c='orange')
+# plt.plot(freq_fossil, data_d12_20*conv, label='d12,20%', c='green')
+# plt.plot(freq_fossil, data_d1_80*conv,
+#          label='d1,80%', linestyle='--', c='blue')
+# plt.plot(freq_fossil, data_d10_80*conv,
+#          label='d10,80%', linestyle='--', c='orange')
+# plt.plot(freq_fossil, data_d12_80*conv,
+#          label='d12,80%', linestyle='--', c='green')
 
-plt.xlabel(r"$\nu$ [GHz]")
-plt.ylabel(r"$I_\nu$ [Jy/sr]")
-plt.legend()
-plt.loglog()
-plt.show()
+# plt.xlabel(r"$\nu$ [GHz]")
+# plt.ylabel(r"$I_\nu$ [Jy/sr]")
+# plt.legend()
+# plt.loglog()
+# plt.show()
