@@ -9,23 +9,23 @@ The internship was divided into two parts :
 
 Supervisors : Thibaut LOUIS and Léo VACHER
 
-Informations for each file :
+## Informations for each file :
 
-plot_SD.py : - plot of $\mu$ and $y$ distortion spectrum along with a blackbody and a shifted blackbody.
+`plot_SD.py` : - plot of $\mu$ and $y$ distortion spectrum along with a blackbody and a shifted blackbody.
              - animated plot of the distortion spectrum from $2\ 10^6$ to $10^2$ redshift.
 
-func_theo.py : analytical expressions of blackbody, modified blackbody (Pysm-defined), temperature shift, $\mu$ and $y$ distortion
+`func_theo.py` : analytical expressions of blackbody, modified blackbody (Pysm-defined), temperature shift, $\mu$ and $y$ distortion
 
-bruit_fossil.py : frequential binning method for FOSSIL sensibility.
+`bruit_fossil.py` : frequential binning method for FOSSIL sensibility.
 
-conversion.py : conversions necessary to switch beetween units
+`conversion.py` : conversions necessary to switch beetween units
 
-mask_file_download.py : downloading of the mask file
+`mask_file_download.py` : downloading of the mask file
 
-dust_SED.py : Masked intensity of dust generated with PySM (execution : ~10 min)
+`dust_SED.py` : Masked intensity of dust generated with PySM (execution : ~10 min)
 
-fit_dust.py : Modified blackbody fit + residues
+`fit_dust.py` : Modified blackbody fit + residues
 
-sync_SED.py : Masked intensity of synchrotron emission generated with PySM (execution : ~10 min)
+`sync_SED.py` : Masked intensity of synchrotron emission generated with PySM (execution : ~10 min)
 
-fit_sync.py : Power law fit + residues
+`fit_sync.py` : Power law fit + residues
